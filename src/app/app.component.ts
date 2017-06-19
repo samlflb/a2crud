@@ -10,5 +10,5 @@ import {CrudService} from './crud.service';
   providers:[CrudService]
 })
 export class AppComponent {
-  title = 'Hi Sam,app works!';
+  title = 'hi sam , app works!';
 }

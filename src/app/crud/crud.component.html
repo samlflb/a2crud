@@ -16,6 +16,6 @@
 <h3>想要的手機</h3>
 <ul>
   <li *ngFor="let phonelist of smartphone">
-    <span (click)="editSmartphone(phonelist)"> {{phonelist.text}}</span> <button (click)="deleteSmartphone(phonelist.text)">刪除</button>
+    <span (click)="editSmartphone(phonelist)"> {{phonelist.text}}</span> <button (click)="editSmartphone(phonelist)">編輯</button>  <button (click)="deleteSmartphone(phonelist.text)">刪除</button>
   </li>
 </ul>   
