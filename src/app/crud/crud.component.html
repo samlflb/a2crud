@@ -1,0 +1,21 @@
+<div *ngIf="appState=='default'">
+  <h3>增加新手機</h3>
+  <form (submit)="addSmartphone()">
+    <input type="text" [(ngModel)]="text" name="addphone">
+  </form>
+</div>
+
+<div *ngIf="appState=='edit'">
+  <h3>編輯手機名稱</h3>
+  <form (submit)="updateSmartphone()">
+    <input type="text" [(ngModel)]="text" name="editphone">
+  </form>
+</div>
+
+
+<h3>想要的手機</h3>
+<ul>
+  <li *ngFor="let phonelist of smartphone">
+    <span (click)="editSmartphone(phonelist)"> {{phonelist.text}}</span> <button (click)="deleteSmartphone(phonelist.text)">刪除</button>
+  </li>
+</ul>   
